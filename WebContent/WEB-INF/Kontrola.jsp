@@ -104,8 +104,6 @@
 				<td><a href="AdjustControl?id=${kontrola.idKontrole}" style="color:green">Izmijeniti</a></td>
 				<td><a href="DeleteControl?id=${kontrola.idKontrole}" onclick="return confirm_alert(this);" style="color:red">Izbrisati</a></td>
 				
-				<%-- <td><a href="KontrolaSort?fromDate=${kontrola.datum}&toDate=${kontrola.datum}">Sortiraj po datumu</a></td> --%>
-			
 				</tr>
 		</c:forEach>	
 
@@ -113,7 +111,7 @@
 	
 <div class="adding">
 	<h3 style="font-family: Georgia; color: #B22222">Za dodavanje nove kontrole u tabelu, odabrati:</h3> 
-	<h3 style="font-family: Georgia; color: #B22222"><a href="AddProduct">Dodati novu kontrolu</a></h3>
+	<h3 style="font-family: Georgia; color: #B22222"><a href="AddControl">Dodati novu kontrolu</a></h3>
 </div>
 	
 <h3 style="font-family: Georgia; color: #B22222">Za sortiranje inspekcijskih kontrola u željenom intervalu, odabrati:</h3>

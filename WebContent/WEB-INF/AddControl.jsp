@@ -38,13 +38,14 @@
 <body class = style1>
 <h1 style="font-family: Georgia; color: #B22222">Unesite podatke kontrole koju želite dodati:</h1>
 
+	<jsp:useBean id="now" class="java.util.Date" />
+	<fmt:formatDate var="dateToday" value="${now}" pattern="yyyy-MM-dd" />
+	<h4 style="font-family: Georgia; color: #B22222">Današnji datum: ${dateToday}</h4>
+
 	<div id = Boxx>
 	<form:form method="get" action="AddControl" modelAttribute="Kontrola">
 	<form:label path="idKontrole"> Unesite id kontrole: </form:label>
 	<form:input id="idKontrole" name="idKontrole" path="idKontrole" /><br>
-	
-<%-- 	<form:label path="datum"> datum: </form:label>
-	<form:input id="datum" name="datum" path="datum" /><br> --%>
 	
 	<form:label path="datum"> Unesite datum kontrole: </form:label>
 	<form:input id="datum" name="datum" path="datum" /><br>
@@ -61,18 +62,14 @@
 	<form:label path="proizvodSiguran"> Unesite da li je proizvod siguran: </form:label>
 	<form:input id="proizvodSiguran" name="proizvodSiguran" path="proizvodSiguran" /><br>
 	
-	<input class="btn btn-primary" type="submit" value="Dodaj" onclick="return validate()"/>
+	<input class="btn btn-success" type="submit" value="Dodaj" onclick="return validate()""/>
 	</form:form>
 	
-	<form method="get" action="Kontrola" modelAttribute="Kontrola"></form>
-	<td><a href = "Kontrola">Vrati se na tabelu kontrola</a></td>
+	<form action="Kontrola">
+		<tr><input class="btn btn-info" type="submit" value="Vrati se na kontrole"/></tr>
+	</form>
 	</div>
-	
-	<jsp:useBean id="now" class="java.util.Date" />
-	<fmt:formatDate var="dateToday" value="${now}" pattern="yyyy-MM-dd" />
-	<p>Današnji datum: ${dateToday}</p>
 
-	
 	<script type="text/javascript">
 		function validate() {
 			var uneseniDatum = document.getElementById("datum").value;
@@ -83,6 +80,12 @@
 				alert("Ne možete unijeti budući datum!"); 
 				return false;
 			}
+		}
+	</script>
+	
+	<script type="text/javascript">
+		function confirm_alert(node) {
+		    return confirm("Kliknuti OK da potvrdite unos!");
 		}
 	</script>
 	

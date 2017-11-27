@@ -26,7 +26,7 @@
 	opacity: 0.65;
 }
 .style1 {
-        background: url(C:/Users/User/Desktop/back.jpg) no-repeat center center fixed;
+        background: url(https://image.ibb.co/keoKF6/back.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

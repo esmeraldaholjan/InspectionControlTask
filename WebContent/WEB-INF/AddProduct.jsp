@@ -57,12 +57,19 @@
 	<form:label path="opis"> Dodati opis proizvoda: </form:label>
 	<form:input id="opis" name="opis" path="opis" /><br>
 	
-	<input class="btn btn-primary" type="submit" value="Dodaj" onclick="location.href='Proizvodi.jsp';"/>
+	<input class="btn btn-success" type="submit" value="Dodaj" onclick="return confirm_alert(this);"/>
 	</form:form>
-	
-	<form method="get" action="Proizvodi" modelAttribute="Proizvodi"></form>
-	<td><a href = "Proizvodi">Vrati se na tabelu proizvoda</a></td>
+
+	<form action="Proizvodi">
+		<tr><input class="btn btn-info" type="submit" value="Vrati se na proizvode"/></tr>
+	</form>
 	</div>
+	
+	<script type="text/javascript">
+		function confirm_alert(node) {
+		    return confirm("Kliknuti OK da potvrdite unos!");
+		}
+	</script>
 	
 </body>
 </html>

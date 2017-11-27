@@ -8,32 +8,6 @@ public class Tijelo {
 	private String inspektorat;
 	private String nadleznost;
 	
-//	public enum inspektorat { 
-//		FBIH, 
-//		RS, 
-//		DISTRIKTBRCKO
-//	}
-//	public enum nadleznost {
-//		TRZISNA_INSPEKCIJA,
-//		ZDRAVSTVENO_SANITARNA_INSPEKCIJA
-//	}
-//
-//	
-//	public inspektorat status1;
-//	public nadleznost status2;
-	
-//	public String getStatus1() {
-//		return this.status1.name();
-//	}
-//	public void setStatus1(String status1) {
-//		this.status1 = inspektorat.valueOf(status1);
-//	}
-//	public String getStatus2() {
-//		return this.status2.name();
-//	}
-//	public void setStatus2(String status2) {
-//		this.status2 = nadleznost.valueOf(status2);
-//	}
 
 	public int getIdTijela() {
 		return idTijela;

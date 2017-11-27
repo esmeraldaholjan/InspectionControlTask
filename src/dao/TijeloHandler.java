@@ -26,11 +26,7 @@ public class TijeloHandler {
 			    
 			    bd.setInspektorat(rs.getString("inspektorat"));
 			    bd.setNadleznost(rs.getString("nadleznost"));
-				
-//				bd.status1 = inspektorat.valueOf(rs.getString("inspektorat"));
-//				bd.status2 = nadleznost.valueOf(rs.getString("nadleznost"));
-
-			
+					
 				result.add(bd);
 				
 			}
